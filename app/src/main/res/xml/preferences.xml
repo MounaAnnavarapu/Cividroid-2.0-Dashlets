@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="Website's REST.php location:"
+        android:key="rest"
+        android:summary="The website's absolute url until extern\"></EditTextPreference>
+    <EditTextPreference android:title="Your API Key:"
+        android:key="apikey"
+        android:summary="Individual API key"></EditTextPreference>
+    <EditTextPreference android:title="Website's key:"
+        android:key="key"
+        android:summary="The website's site key"></EditTextPreference>
+
+</PreferenceScreen>
