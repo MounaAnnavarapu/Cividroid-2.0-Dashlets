@@ -8,7 +8,7 @@ import java.util.Map;
 
 
 public class ReportInstanceQuery {
-    public static Map<String,String> buildQueryParams(String apikey, String sitekey, int instanceId) {
+    public static Map<String,String> buildQueryParams(String apikey, String sitekey, int instanceId, String offset) {
         Map<String, String> map = new HashMap<>();
         map.put("entity", "ReportTemplate");
         map.put("action", "getrows");
@@ -19,6 +19,7 @@ public class ReportInstanceQuery {
             jsonObject.put("sequential", 1);
             jsonObject.put("instance_id", instanceId);
             JSONObject options = new JSONObject();
+            options.put("offset",offset);
             JSONObject metaData = new JSONObject();
             metaData.put("0", "title");
             metaData.put("1", "labels");

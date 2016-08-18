@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class AvailableReporsQuery {
+public class AvailableReportsQuery {
     public static Map<String,String> buildQueryParams(String apikey, String sitekey, int offset) {
         Map<String, String> map = new HashMap<>();
         map.put("entity", "ReportInstance");

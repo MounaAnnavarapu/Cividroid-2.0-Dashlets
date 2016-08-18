@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".DashletsHome">
+    tools:context="plus.dashlet.dashlets.DashletsActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -23,12 +23,49 @@
 
     <include layout="@layout/content_main" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_add_white_24dp" />
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/prev"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:fabSize="mini"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_left_white_18dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/next"
+            android:layout_toRightOf="@id/prev"
+            android:layout_toEndOf="@id/prev"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:src="@drawable/ic_keyboard_arrow_right_white_18dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_white_24dp" />
+
+    </RelativeLayout>
+
+
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>

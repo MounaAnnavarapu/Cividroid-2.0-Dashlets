@@ -15,15 +15,15 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
-public class ChartDialog extends DialogFragment {
+public class ChartCreationDialog extends DialogFragment {
 
     private ChartSelectionListener chartSelectionListener;
 
-    public static final ChartDialog getInstance(Bundle bundle, ChartSelectionListener chartSelectionListener) {
-        ChartDialog chartDialog = new ChartDialog();
-        chartDialog.setArguments(bundle);
-        chartDialog.chartSelectionListener = chartSelectionListener;
-        return chartDialog;
+    public static final ChartCreationDialog getInstance(Bundle bundle, ChartSelectionListener chartSelectionListener) {
+        ChartCreationDialog chartCreationDialog = new ChartCreationDialog();
+        chartCreationDialog.setArguments(bundle);
+        chartCreationDialog.chartSelectionListener = chartSelectionListener;
+        return chartCreationDialog;
     }
 
 
@@ -31,7 +31,6 @@ public class ChartDialog extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        // Use the Builder class for convenient dialog construction
 
         Bundle bundle = getArguments();
         ArrayList<String> yAxis = bundle.getStringArrayList("yaxis");
@@ -61,24 +60,27 @@ public class ChartDialog extends DialogFragment {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Generate a Chart").setView(chartView)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setPositiveButton(getString(android.R.string.ok), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        if(ySpinner.getSelectedItem()==null || xSpinner.getSelectedItem()==null) {
+                            Toast.makeText(getActivity(),getString(R.string.invalid_config),Toast.LENGTH_SHORT).show();
+                            return;
+                        }
                         String yColumn, xColumn;
+
                         yColumn = ySpinner.getSelectedItem().toString();
                         xColumn = xSpinner.getSelectedItem().toString();
                         if(yColumn.equalsIgnoreCase(xColumn)) {
-                            Toast.makeText(getActivity(),"X-Axis and Y-Axis have same column selected!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(),getString(R.string.same_column_selected),Toast.LENGTH_SHORT).show();
                         } else {
                             chartSelectionListener.chartSelected(yColumn,xColumn, chartSpinner.getSelectedItem().toString());
                         }
                     }
                 })
-                .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                .setNegativeButton(getString(android.R.string.cancel), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        // User cancelled the dialog
                     }
                 });
-        // Create the AlertDialog object and return it
         return builder.create();
     }
 }

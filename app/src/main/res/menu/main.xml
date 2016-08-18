@@ -6,4 +6,32 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/save_offline"
+        android:orderInCategory="200"
+        android:icon="@drawable/ic_offline_pin_white_24dp"
+        android:title="@string/saveOffline"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/show_saved_pages"
+        android:orderInCategory="200"
+        android:title="@string/showSavedPages"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/goLive"
+        android:orderInCategory="200"
+        android:icon="@drawable/ic_public_white_24dp"
+        android:title="@string/go_live"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/deletePage"
+        android:orderInCategory="200"
+        android:title="@string/delete_page"
+        app:showAsAction="never" />
+
+
+
 </menu>

@@ -2,11 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="bottom"
     android:orientation="vertical"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
+        android:contentDescription="@string/navi_desc"
         android:layout_width="match_parent"
         android:background="@drawable/rocket1"
         android:scaleType="center"
@@ -18,11 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="DASHLETS"
+        android:text="@string/app_name_caps"
         android:textSize="20sp"
         android:textStyle="bold"
         android:paddingBottom="10dp"
         android:paddingLeft="5dp"
+        android:paddingStart="5dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 

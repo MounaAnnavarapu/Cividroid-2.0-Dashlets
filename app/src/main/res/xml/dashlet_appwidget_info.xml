@@ -1,0 +1,10 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="250dp"
+    android:minHeight="250dp"
+    android:updatePeriodMillis="0"
+    android:previewImage="@drawable/rocket1"
+    android:initialLayout="@layout/dashlet_widget_panel"
+    android:configure="plus.dashlet.dashlets.widget.DashletWidgetConfigurationActivity"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen">
+</appwidget-provider>

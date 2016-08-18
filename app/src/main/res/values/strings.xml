@@ -6,4 +6,30 @@
 
     <string name="action_settings">Settings</string>
     <string name="no_data_loaded">No data loaded!</string>
+    <string name="page1Prompt">You\'re at page 1.</string>
+    <string name="lastPagePrompt">You\'re at the last page.</string>
+    <string name="saveOffline">Save page</string>
+    <string name="no_data_to_save">No data on this page to save.</string>
+    <string name="showSavedPages">View saved pages</string>
+    <string name="go_live">go online</string>
+    <string name="no_saved_pages">No pages saved for this type of report.</string>
+    <string name="delete_page">Delete page</string>
+    <string name="save_for_widget">Save for widget</string>
+    <string name="get_chart_name">Enter a name for your chart widget</string>
+    <string name="choose_chart_for_widget">Choose a chart</string>
+    <string name="invalid_config">Invalid configuration.</string>
+    <string name="widget_panel_description">Widget panel for chart</string>
+    <string name="navi_desc">navigation drawer cover image</string>
+    <string name="y_axis_selection">Select column for Y-Axis:</string>
+    <string name="x_axis_selection">Select column for X-Axis:</string>
+    <string name="select_chart_type">Select chart type:</string>
+    <string name="app_name_caps">DASHLETS</string>
+    <string name="config_needed">Configuration needed!</string>
+    <string name="select_dashlet">Select a Dashlet from menu!</string>
+    <string name="same_column_selected">X-Axis and Y-Axis have same column selected!</string>
+    <string name="page_saved">Page saved!</string>
+    <string name="back_online">The App is now in online mode.</string>
+    <string name="offline_mode">The App is now in offline mode.</string>
+    <string name="page_deleted">Page deleted!</string>
+    <string name="no_chart_available">No chart saved from App for widget.</string>
 </resources>

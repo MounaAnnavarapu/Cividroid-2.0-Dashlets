@@ -6,7 +6,6 @@
     <color name="navBackground">#F3F3F3</color>
     <color name="superDarGrey">#212121</color>
     <color name="oddGrey">#424242</color>
-    <color name="evenGrey">#616161</color>
     <color name="yellow">#FFEB3B</color>
     <color name="deepOrange">#FF5722</color>
 </resources>
