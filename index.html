@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cividroid-2.0-dashlets by MounaAnnavarapu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Cividroid-2.0-dashlets</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/MounaAnnavarapu/Cividroid-2.0-Dashlets" class="btn">View on GitHub</a>
+      <a href="https://github.com/MounaAnnavarapu/Cividroid-2.0-Dashlets/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/MounaAnnavarapu/Cividroid-2.0-Dashlets/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="final-report-on-the-cividroid-20---gsoc-2016-project" class="anchor" href="#final-report-on-the-cividroid-20---gsoc-2016-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Final Report On the Cividroid 2.0 - GSoC 2016 project</h1>
+
+<h1></h1>
+
+<p>I am Mouna Annavarapu, a tech enthusiast. I’m from Vijayawada, India and have completed Bachelor’s in Computer Science Engineering at Hindustan University, Chennai. I got first introduced to Cividroid through my mentor, Jagatheesan Pillai. Cividroid, is an Android Application which extends CiviCRM with a mobile perspective, leveraging some of the unique advantages of the Android platform.</p>
+
+<p>While I was so puzzled thinking about how to get myself into a task which could keep me occupied, using the skills I have and also benefit a huge group of people, I found Cividroid quite interesting when I looked into the updates on the app development. I eventually came up with an idea to extend Cividroid’s functionalities. And I’m so glad I made it into GSoC 2016.</p>
+
+<p>Dashlets is destined to merge with Cividroid as Cividroid 2.0. Here is a brief on Dashlets as an independent App:
+The App revolves around the concept of dashlets, providing users all the CiviReports by syncing functionality which can further be used to create charts displaying the data visually. The CiviReports data can be saved for offline references. The charts can be used to create widgets for the home screens.</p>
+
+<hr>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features:</h2>
+
+<ul>
+<li><p>The App needs only a apikey, sitekey and url of your website. No login is required to use the App. </p></li>
+<li><p>All the CiviReports (even a custom one, or provided by 3rd party extensions) are synced and are available as a Dashlet.</p></li>
+<li><p>A Dashlet tabulates the data on a page which is scrollable both vertically as well as horizontally. Each page can display upto 25 records. A pair of floating navigational arrow buttons can be used to load more data. </p></li>
+<li><p>Each page of a dashlet can be saved for offline viewing. Switching between online and offline mode is seamless with a button in the toolbar.</p></li>
+<li>
+<p>For every pair of valid columns (with numeric data), a corresponding chart can be generated. App supports the following charts:</p>
+
+<blockquote>
+<ul>
+<li>Bar Chart</li>
+<li>Horizontal Chart</li>
+<li>Pie Chart</li>
+<li>Cubic Line Chart</li>
+</ul>
+</blockquote>
+</li>
+<li><p>Each chart generated can be saved to stick as a widget on homescreen.</p></li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="software-support-used-for-cividroid-20" class="anchor" href="#software-support-used-for-cividroid-20" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Software Support used for Cividroid 2.0</h2>
+
+<p>While I worked on the Dashlets concept for the Cividroid 2.0, different ideas and confusions sparked in my mind for generating the visual charts from the CiviReports. I finally found MPAndroidChart library to render the charts elegantly.</p>
+
+<hr>
+
+<h2>
+<a id="screens" class="anchor" href="#screens" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Screens</h2>
+
+<p>Few screens for a short glimpse of the final product.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/18498028/17832037/8a1dbff0-6717-11e6-919a-b9de2e29127c.png" width="250"> 
+<img src="https://cloud.githubusercontent.com/assets/18498028/17832070/1c663824-6718-11e6-8d84-d6773f4a1536.png" width="250" hspace="20"> 
+<img src="https://cloud.githubusercontent.com/assets/18498028/17832071/1c68a0be-6718-11e6-8955-a18ecbae3a7b.png" width="250" hspace="5"> </p>
+
+<p>CiviReports are displayed in a list, where a user can select a CiviReport and a detailed spread of its content is displayed. Clicking the floating ‘+’ button will let a user to generate a chart with desired fields. 
+Y-Axis must be a column with numeric values and the App will let the user select only valid columns, while X-Axis could be any column.
+<br></p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/18498028/17832068/1c652a92-6718-11e6-934a-5adeddad7ba1.png" width="250"> 
+<img src="https://cloud.githubusercontent.com/assets/18498028/17832066/1c3545e8-6718-11e6-8e86-fc5f4363e096.png" width="250" hspace="20"> 
+<img src="https://cloud.githubusercontent.com/assets/18498028/17832072/1c693326-6718-11e6-8ee1-7053d0780faf.png" width="250" hspace="5"> </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/18498028/17832063/1c3247b2-6718-11e6-8236-e14f84b6390f.png" width="250" hspace="275"> </p>
+
+<p>These are the pretty looking charts a user can generate using the data in the CiviReports.</p>
+
+<hr>
+
+<h2>
+<a id="offline-mode" class="anchor" href="#offline-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Offline Mode</h2>
+
+<p><img src="https://cloud.githubusercontent.com/assets/18498028/17832074/1c962282-6718-11e6-8b30-13a136f0ae42.png" width="250"> 
+<img src="https://cloud.githubusercontent.com/assets/18498028/17832075/1c975968-6718-11e6-9d5d-acb41590bff8.png" width="250" hspace="20"> 
+<img src="https://cloud.githubusercontent.com/assets/18498028/17832073/1c8ce0f0-6718-11e6-9887-b9a370fbc414.png" width="250" hspace="5"> </p>
+
+<p>It’s a pretty cool feature I added thinking of the state of the data in the app when it’s not connected to the internet. An icon on the top lets the users save a page for offline viewing. One can always go online using the globe icon while the saved page is open.</p>
+
+<hr>
+
+<h2>
+<a id="save-widgets" class="anchor" href="#save-widgets" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Save Widgets</h2>
+
+<p><img src="https://cloud.githubusercontent.com/assets/18498028/17832067/1c5b2efc-6718-11e6-81d8-e57aaeef843c.png" width="250"> 
+<img src="https://cloud.githubusercontent.com/assets/18498028/17832062/1c3256a8-6718-11e6-9fb9-344326fbdb4d.png" width="250" hspace="20"> 
+<img src="https://cloud.githubusercontent.com/assets/18498028/17832069/1c65c2e0-6718-11e6-9ee1-e917688c30e7.png" width="250" hspace="5"> 
+<img src="https://cloud.githubusercontent.com/assets/18498028/17832065/1c34cc4e-6718-11e6-94fa-2f68ae0a4b56.png" width="250" hspace="90"> 
+<img src="https://cloud.githubusercontent.com/assets/18498028/17832064/1c3352e2-6718-11e6-80a1-56179d0b5b6a.png" width="250"> </p>
+
+<p>The charts generated can be used as widgets on home screens. The user could save a chart to use as a widget, by selecting “Save for widget” from options and naming it.
+In the widget set up, selecting the Dashlets widget will let the user choose a saved chart for using as a widget. </p>
+
+<p>Link to the code and the detailed explanation of the Cividroid’s functionality 
+<a href="https://github.com/MounaAnnavarapu/Cividroid-2.0-Dashlets">https://github.com/MounaAnnavarapu/Cividroid-2.0-Dashlets</a></p>
+
+<hr>
+
+<h2>
+<a id="closing-note------------" class="anchor" href="#closing-note------------" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Closing Note            </h2>
+
+<p>I had a great time developing this product. Even though the challenges I faced were a bit demanding, they urged me to think in a different way to complete them, which helped me get things straight and simple. The best part of the Google Summer Of Code is contributing to the Open Source Community. I’m extremely happy to complete this program successfully. My mentor was so active and patient in guiding me towards success. I’m very thankful to him. 
+It brings me joy to roll out my work to the Open Source Community! I’m looking forward to contributing more by working further for the enhancement of the organisation.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/MounaAnnavarapu/Cividroid-2.0-Dashlets">Cividroid-2.0-dashlets</a> is maintained by <a href="https://github.com/MounaAnnavarapu">MounaAnnavarapu</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
